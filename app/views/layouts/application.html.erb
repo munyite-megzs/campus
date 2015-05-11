@@ -10,23 +10,65 @@
 <body>
 <nav class="teal">
   <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Campusbay</a>
+      <!-- <a href="#!" class="brand-logo" >Campusbay</a> -->
+       <%= link_to "Campusbay", '#',class: "brand-logo" %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#about">Home</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a href="#icons">About</a></li>
+
+
+
+
+
+          <li><%= link_to "Home", '#' , class: "grey-text text-lighten-3" %></li> 
+          
+          <li><%= link_to "Categories", '#' , class: "grey-text text-lighten-3" %></li>
+          <li><%= link_to "About", '#' , class: "grey-text text-lighten-3" %></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">  
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">About</a></li>
+          <li><%= link_to "Home", '#', class: "grey-text text-lighten-3" %></li>
+          <li><%= link_to "Categories", '#'%></li>
+          <li><%= link_to "About", '#'%></li>
       </ul>
   </div>
 </nav>
 
-<p class="flash"><%= flash.notice %></p>
+
+<div class="container">
+  <p class="flash"><%= flash.notice %></p>
 <%= yield %>
+
+</div>
+<!-- <div class="card-panel teal lighten-2"> -->
+
+
+
+<footer class="page-footer #00695c teal darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Find us</h5>
+                <p class="grey-text text-lighten-4">Map for our location will go here</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+
+                
+                  <li><%= link_to "Contuct us", '#', class: "grey-text text-lighten-3" %></li>
+                  <li><%= link_to "How to shop on campusbay", '#', class: "grey-text text-lighten-3" %></li>
+                  <li><%= link_to "Terms and Conditions", '#', class: "grey-text text-lighten-3" %></li>
+                  <li><%= link_to "Help", '#', class: "grey-text text-lighten-3" %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright campusbay
+            <a class="grey-text text-lighten-4 right" href="#!">Get our Mobile App</a>
+            </div>
+          </div>
+        </footer>
 
 </body>
 </html>
